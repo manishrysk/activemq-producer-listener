@@ -10,7 +10,7 @@ import java.util.Map;
 public class MessageConsumer {
 
     @JmsListener(destination = "myqueue")
-    public void receiveMessage(final Map<String, String> jsonMessage) throws JMSException {
-        System.out.println("Received message in consumer" + jsonMessage);
+    public void receiveMessage(final Map<String, String> message) throws JMSException {
+        System.out.println("Received message in consumer" + message);
     }
 }
