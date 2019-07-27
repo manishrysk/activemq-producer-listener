@@ -15,7 +15,6 @@ public class MessageProducer {
 
     public void sendMessage() {
         Map<String, String> message = new HashMap<>();
-
         message.put("sender", "from producer microservice");
         message.put("message", "abc xyz");
         this.jmsMessagingTemplate.convertAndSend("myqueue", message);
