@@ -1,5 +1,6 @@
 package com.rysk.messageconsumer.consumer;
 
+import entity.Message;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +11,7 @@ import java.util.Map;
 public class MessageConsumer {
 
     @JmsListener(destination = "myqueue")
-    public void receiveMessage(final Map<String, String> message) throws JMSException {
+    public void receiveMessage(final Message message) throws JMSException {
         System.out.println("Received message in consumer" + message);
     }
 }
