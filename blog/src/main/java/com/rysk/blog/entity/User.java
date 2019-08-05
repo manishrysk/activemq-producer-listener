@@ -1,5 +1,7 @@
 package com.rysk.blog.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
@@ -26,6 +28,7 @@ public class User implements Serializable {
     @Column(name = "email", unique = true)
     private String email;
 
+    @JsonIgnore
     @Size(max = 150)
     @Column(name = "password")
     private String password;

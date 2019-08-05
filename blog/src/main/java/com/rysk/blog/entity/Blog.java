@@ -21,6 +21,7 @@ public class Blog {
     private String title;
 
     @NotNull
+    @Lob
     @Column(name = "body")
     private String body;
 
